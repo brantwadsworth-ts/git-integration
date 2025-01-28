@@ -1,0 +1,291 @@
+guid: 4165f195-575a-4d3a-9dc5-e4a3672e191c
+table:
+  name: h1a_data_new
+  db: as_h1_primary
+  schema: brantwadsworth463
+  db_table: h1a_data_new
+  connection:
+    name: AnalystStudio_connection
+    fqn: 116f84bb-0f62-447c-b737-20fcd03cb0bb
+  columns:
+  - name: FISCAL_YEAR_QUARTER_LABEL
+    db_column_name: FISCAL_YEAR_QUARTER_LABEL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DATE
+    db_column_name: DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: ACCOUNT_BAND
+    db_column_name: ACCOUNT_BAND
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACCOUNT_REGIONS
+    db_column_name: ACCOUNT_REGIONS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACCOUNT_INDUSTRY
+    db_column_name: ACCOUNT_INDUSTRY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NUM_CUSTOMERS
+    db_column_name: NUM_CUSTOMERS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_ADDED_CUSTOMER
+    db_column_name: NUM_ADDED_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_WON_BACK_CUSTOMER
+    db_column_name: NUM_WON_BACK_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_PARENT_COMPANIES
+    db_column_name: NUM_PARENT_COMPANIES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_ADDED_PARENT
+    db_column_name: NUM_ADDED_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_WON_BACK_PARENT
+    db_column_name: NUM_WON_BACK_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_OF_NEW_DEALS
+    db_column_name: NUM_OF_NEW_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: TOTAL_NEW_BOOKING_AMOUNT
+    db_column_name: TOTAL_NEW_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: NUM_OF_EXPANSION_DEALS
+    db_column_name: NUM_OF_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: TOTAL_EXPANSION_BOOKING_AMOUNT
+    db_column_name: TOTAL_EXPANSION_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: NEW_NARR
+    db_column_name: NEW_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: EXPANSION_NARR
+    db_column_name: EXPANSION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CONTRACTION_NARR
+    db_column_name: CONTRACTION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CHURN_NARR
+    db_column_name: CHURN_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: NET_NARR
+    db_column_name: NET_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: MULTIYEAR_IMPACT
+    db_column_name: MULTIYEAR_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: MISSING_OPPORTUNITIES_IMPACT
+    db_column_name: MISSING_OPPORTUNITIES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: STUB_DEALS_IMPACT
+    db_column_name: STUB_DEALS_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: MISSING_AND_ERRONOUS_QUOTELINES_IMPACT
+    db_column_name: MISSING_AND_ERRONOUS_QUOTELINES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: RENEWABLE_BOOKING_AMOUNT
+    db_column_name: RENEWABLE_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: TOTAL_BOOKING_AMOUNT
+    db_column_name: TOTAL_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: TOTAL_OPPORTUNITIES_SOLD
+    db_column_name: TOTAL_OPPORTUNITIES_SOLD
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: QUARTERLY_OVERALL_NEW_AND_UPSELL_QUOTA_VALUE
+    db_column_name: QUARTERLY_OVERALL_NEW_AND_UPSELL_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: QUARTERLY_OVERALL_CONTRACTION_AND_CHURN_QUOTA_VALUE
+    db_column_name: QUARTERLY_OVERALL_CONTRACTION_AND_CHURN_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: BOOK_OF_BUSINESS_QUARTERLY_DIFFERENCE
+    db_column_name: BOOK_OF_BUSINESS_QUARTERLY_DIFFERENCE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: NUM_OF_NEW_AND_EXPANSION_DEALS
+    db_column_name: NUM_OF_NEW_AND_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_LOST_CUSTOMER
+    db_column_name: NUM_LOST_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: NUM_LOST_PARENT
+    db_column_name: NUM_LOST_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: BOOK_OF_BUSINESS
+    db_column_name: BOOK_OF_BUSINESS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OTHER_IMPACT
+    db_column_name: OTHER_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: NET_IMPACT
+    db_column_name: NET_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  dataset_id: 6222b25fb1ca
+  properties:
+    sage_config:
+      is_sage_enabled: false

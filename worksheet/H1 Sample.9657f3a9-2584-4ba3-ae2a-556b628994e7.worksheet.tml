@@ -1,0 +1,354 @@
+guid: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+model:
+  name: H1 Sample
+  model_tables:
+  - name: h1a_data_new
+    fqn: 4165f195-575a-4d3a-9dc5-e4a3672e191c
+  columns:
+  - name: Expansion NARR
+    column_id: h1a_data_new::EXPANSION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Expansion NARR
+  - name: Multiyear Impact
+    column_id: h1a_data_new::MULTIYEAR_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Multiyear Effect
+      - Multiyear Influence
+      synonym_type: AUTO_GENERATED
+  - name: Total New Booking Amount
+    column_id: h1a_data_new::TOTAL_NEW_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - New Booking Amount
+      - Fresh Booking Amount
+      synonym_type: AUTO_GENERATED
+  - name: Churn Narr
+    column_id: h1a_data_new::CHURN_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Churn Reason
+      - Churn Explanation
+      synonym_type: AUTO_GENERATED
+  - name: Book Of Business
+    column_id: h1a_data_new::BOOK_OF_BUSINESS
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Business Book
+      - Business Ledger
+      synonym_type: AUTO_GENERATED
+  - name: Overall Contraction And Churn Quota Value
+    column_id: h1a_data_new::QUARTERLY_OVERALL_CONTRACTION_AND_CHURN_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Quarterly Overall Contraction And Churn Quota Value
+      synonym_type: USER_DEFINED
+  - name: New Narr
+    column_id: h1a_data_new::NEW_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Fresh Narr
+      - Recent Narr
+      synonym_type: AUTO_GENERATED
+  - name: Overall New And Upsell Quota Value
+    column_id: h1a_data_new::QUARTERLY_OVERALL_NEW_AND_UPSELL_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Quarterly Overall New And Upsell Quota Value
+      synonym_type: USER_DEFINED
+  - name: Book Of Business Quarterly Difference
+    column_id: h1a_data_new::BOOK_OF_BUSINESS_QUARTERLY_DIFFERENCE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Business Book Quarterly Difference
+      - Business Ledger Quarterly Difference
+      synonym_type: AUTO_GENERATED
+  - name: Account Regions
+    column_id: h1a_data_new::ACCOUNT_REGIONS
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Regions
+      - Territories
+      synonym_type: AUTO_GENERATED
+  - name: Num Lost Customer
+    column_id: h1a_data_new::NUM_LOST_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Lost Customer
+      - Dropped Customer
+      synonym_type: AUTO_GENERATED
+  - name: Num Added Parent
+    column_id: h1a_data_new::NUM_ADDED_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - New Parent Count
+      - New Parent Added
+      synonym_type: AUTO_GENERATED
+  - name: Num Won Back Customer
+    column_id: h1a_data_new::NUM_WON_BACK_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Won Back Customer
+      - Regained Customer
+      synonym_type: AUTO_GENERATED
+  - name: Num Of New Deals
+    column_id: h1a_data_new::NUM_OF_NEW_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - New Deals Count
+      - Deals Added
+      synonym_type: AUTO_GENERATED
+  - name: Total Booking Amount
+    column_id: h1a_data_new::TOTAL_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Total Revenue
+      - Total Sales
+      synonym_type: AUTO_GENERATED
+  - name: Other Impact
+    column_id: h1a_data_new::OTHER_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Other Effect
+      - Other Influence
+      synonym_type: AUTO_GENERATED
+  - name: Num Won Back Parent
+    column_id: h1a_data_new::NUM_WON_BACK_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Won Back Parent
+      - Regained Parent
+      synonym_type: AUTO_GENERATED
+  - name: Date
+    column_id: h1a_data_new::DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: AUTO_GENERATED
+  - name: Fiscal Year Quarter Label
+    column_id: h1a_data_new::FISCAL_YEAR_QUARTER_LABEL
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - FY Quarter Label
+      - Quarter Label
+      synonym_type: AUTO_GENERATED
+  - name: Missing Opportunities Impact
+    column_id: h1a_data_new::MISSING_OPPORTUNITIES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Missed Opportunities Impact
+      - Lost Opportunities Impact
+      synonym_type: AUTO_GENERATED
+  - name: Num Lost Parent
+    column_id: h1a_data_new::NUM_LOST_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Lost Parent Count
+      - Lost Parent
+      synonym_type: AUTO_GENERATED
+  - name: Net Impact
+    column_id: h1a_data_new::NET_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Overall Impact
+      - Total Impact
+      synonym_type: AUTO_GENERATED
+  - name: Missing And Erronous Quotelines Impact
+    column_id: h1a_data_new::MISSING_AND_ERRONOUS_QUOTELINES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Missing And Erronous Quotes Impact
+      - Missing And Erronous Quotations Impact
+      synonym_type: AUTO_GENERATED
+  - name: Contraction Narr
+    column_id: h1a_data_new::CONTRACTION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Shrink Narr
+      - Reduce Narr
+      synonym_type: AUTO_GENERATED
+  - name: Num Of New And Expansion Deals
+    column_id: h1a_data_new::NUM_OF_NEW_AND_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - New and Expansion Deals
+      - New and Additional Deals
+      synonym_type: AUTO_GENERATED
+  - name: Total Expansion Booking Amount
+    column_id: h1a_data_new::TOTAL_EXPANSION_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Expansion Revenue
+      - Expansion Sales
+      synonym_type: AUTO_GENERATED
+  - name: Num Of Expansion Deals
+    column_id: h1a_data_new::NUM_OF_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Expansion Deals
+      - Additional Deals
+      synonym_type: AUTO_GENERATED
+  - name: Stub Deals Impact
+    column_id: h1a_data_new::STUB_DEALS_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Incomplete Deals Impact
+      - Partial Deals Impact
+      synonym_type: AUTO_GENERATED
+  - name: Total Opportunities Sold
+    column_id: h1a_data_new::TOTAL_OPPORTUNITIES_SOLD
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunities Sold
+      - Deals Sold
+      synonym_type: AUTO_GENERATED
+  - name: Net Narr
+    column_id: h1a_data_new::NET_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Overall Narr
+      - Total Narr
+      synonym_type: AUTO_GENERATED
+  - name: Account Industry
+    column_id: h1a_data_new::ACCOUNT_INDUSTRY
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Industry
+      - Business Type
+      synonym_type: AUTO_GENERATED
+  - name: Num Customers
+    column_id: h1a_data_new::NUM_CUSTOMERS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Customers
+      - Clients
+      synonym_type: AUTO_GENERATED
+  - name: Renewable Booking Amount
+    column_id: h1a_data_new::RENEWABLE_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Renewable Revenue
+      - Renewable Sales
+      synonym_type: AUTO_GENERATED
+  - name: Account Band
+    column_id: h1a_data_new::ACCOUNT_BAND
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Band
+      - Level
+      synonym_type: AUTO_GENERATED
+  - name: Num Parent Companies
+    column_id: h1a_data_new::NUM_PARENT_COMPANIES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Parent Companies
+      - Parent Firms
+      synonym_type: AUTO_GENERATED
+  - name: Num Added Customer
+    column_id: h1a_data_new::NUM_ADDED_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Added Customer
+      - New Customer
+      synonym_type: AUTO_GENERATED
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: true
