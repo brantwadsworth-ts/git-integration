@@ -1,0 +1,421 @@
+guid: 9e9487a4-98a3-42b6-98f7-082216421f5a
+liveboard:
+  name: kelcey@hackerone.com's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total New + Expansion NARR
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      formulas:
+      - id: kpi_total_new_and_expansion_narr
+        name: kpi_total_new_and_expansion_narr
+        expr: "[New Narr] + [Expansion NARR] "
+        was_auto_generated: false
+      search_query: "[kpi_total_new_and_expansion_narr]"
+      answer_columns:
+      - name: Total kpi_total_new_and_expansion_narr
+      table:
+        table_columns:
+        - column_id: Total kpi_total_new_and_expansion_narr
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Total kpi_total_new_and_expansion_narr
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total kpi_total_new_and_expansion_narr\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total kpi_total_new_and_expansion_narr
+        axis_configs:
+        - "y":
+          - Total kpi_total_new_and_expansion_narr
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total kpi_total_new_and_expansion_narr\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fd2825b8-5c6d-4496-9102-4dd1b1f9d244\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total kpi_total_new_and_expansion_narr\"],\"isOpposite\": false}},{\"id\": \"c72966cf-fd1d-4b58-8790-0576965f434f\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: da61ff9b-7454-4e9e-a56a-5730620999e4
+  - id: Viz_2
+    answer:
+      name: Net Bookings Rollup
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      formulas:
+      - id: churn net bookings
+        name: churn net bookings
+        expr: "sum ( [Churn Narr] )"
+        was_auto_generated: false
+      - id: contraction net bookings
+        name: contraction net bookings
+        expr: "sum ( [Contraction Narr] )"
+        was_auto_generated: false
+      - id: expansion net bookings
+        name: expansion net bookings
+        expr: "sum ( [Expansion NARR] )"
+        was_auto_generated: false
+      - id: net bookings
+        name: net bookings
+        expr: "sum ( [Net Narr] )"
+        was_auto_generated: false
+      - id: new net bookings
+        name: new net bookings
+        expr: "sum ( [New Narr] )"
+        was_auto_generated: false
+      search_query: "[new net bookings] [expansion net bookings] [contraction net bookings] [churn net bookings] [net bookings] by [Fiscal Year Quarter Label] sort by [Fiscal Year Quarter Label]"
+      answer_columns:
+      - name: Fiscal Year Quarter Label
+      - name: churn net bookings
+      - name: contraction net bookings
+      - name: expansion net bookings
+      - name: net bookings
+      - name: new net bookings
+      table:
+        table_columns:
+        - column_id: Fiscal Year Quarter Label
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: churn net bookings
+          headline_aggregation: SUM
+        - column_id: contraction net bookings
+          headline_aggregation: SUM
+        - column_id: expansion net bookings
+          headline_aggregation: SUM
+        - column_id: net bookings
+          headline_aggregation: SUM
+        - column_id: new net bookings
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Fiscal Year Quarter Label
+        - new net bookings
+        - expansion net bookings
+        - contraction net bookings
+        - churn net bookings
+        - net bookings
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"new net bookings\",\"columnProperty\": {}},{\"columnId\": \"expansion net bookings\",\"columnProperty\": {}},{\"columnId\": \"contraction net bookings\",\"columnProperty\": {}},{\"columnId\": \"churn net bookings\",\"columnProperty\": {}},{\"columnId\": \"net bookings\",\"columnProperty\": {}}]}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Fiscal Year Quarter Label
+        - column_id: churn net bookings
+        - column_id: contraction net bookings
+        - column_id: expansion net bookings
+        - column_id: net bookings
+        - column_id: new net bookings
+        axis_configs:
+        - x:
+          - Fiscal Year Quarter Label
+          "y":
+          - new net bookings
+          - contraction net bookings
+          - churn net bookings
+          - net bookings
+        - "y":
+          - new net bookings
+          - contraction net bookings
+          - churn net bookings
+          - net bookings
+        - x:
+          - Fiscal Year Quarter Label
+          "y":
+          - new net bookings
+          - contraction net bookings
+          - churn net bookings
+          - net bookings
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"new net bookings\",\"columnProperty\": {}},{\"columnId\": \"expansion net bookings\",\"columnProperty\": {}},{\"columnId\": \"contraction net bookings\",\"columnProperty\": {}},{\"columnId\": \"churn net bookings\",\"columnProperty\": {}},{\"columnId\": \"net bookings\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"58687a51-6784-41f2-992d-30cee7444d1a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"new net bookings\"],\"isOpposite\": false}},{\"id\": \"aee96170-9781-48b8-9a40-0c57fe25d606\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"contraction net bookings\"],\"isOpposite\": true}},{\"id\": \"f24413f7-fdaa-499d-a3e1-9ca960bd8203\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"churn net bookings\"],\"isOpposite\": true}},{\"id\": \"3769d6db-d779-4cda-8902-47f17f1501e1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"net bookings\"],\"isOpposite\": true}},{\"id\": \"f75403d3-2923-4a37-a10c-fe88e68fe54d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fiscal Year Quarter Label\"]}}],\"systemSeriesColors\": [{\"serieName\": \"new net bookings\",\"color\": \"#06BF7F\"},{\"serieName\": \"expansion net bookings\",\"color\": \"#FCC838\"},{\"serieName\": \"contraction net bookings\",\"color\": \"#48D1E0\"},{\"serieName\": \"churn net bookings\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 002a5615-ff73-4cad-9fa7-e31ee94ef61c
+  - id: Viz_3
+    answer:
+      name: Total Bookings by Category and Impact
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      formulas:
+      - id: impact from missing and erroneous quotelines
+        name: impact from missing and erroneous quotelines
+        expr: "[Missing And Erronous Quotelines Impact]"
+        was_auto_generated: false
+      - id: impact from missing opportunities
+        name: impact from missing opportunities
+        expr: "[Missing Opportunities Impact]"
+        was_auto_generated: false
+      - id: impact from multiyear deals
+        name: impact from multiyear deals
+        expr: "[Multiyear Impact]"
+        was_auto_generated: false
+      - id: impact from stub deals
+        name: impact from stub deals
+        expr: "[Stub Deals Impact]"
+        was_auto_generated: false
+      - id: net change in book of business
+        name: net change in book of business
+        expr: "[Net Impact]"
+        was_auto_generated: false
+      - id: new and expansion net bookings
+        name: new and expansion net bookings
+        expr: "[New Narr] + [Expansion NARR]"
+        was_auto_generated: false
+      - id: total churn and contraction net bookings
+        name: total churn and contraction net bookings
+        expr: "[Contraction Narr] + [Churn Narr]"
+        was_auto_generated: false
+      - id: total impact from other sources
+        name: total impact from other sources
+        expr: "[Other Impact]"
+        was_auto_generated: false
+      search_query: "[new and expansion net bookings] [total churn and contraction net bookings] [impact from missing opportunities] [impact from missing and erroneous quotelines] [impact from multiyear deals] [impact from stub deals] [total impact from other sources] [net change in book of business] [Fiscal Year Quarter Label]"
+      answer_columns:
+      - name: Fiscal Year Quarter Label
+      - name: Total impact from missing and erroneous quotelines
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total impact from missing opportunities
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total impact from multiyear deals
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total impact from stub deals
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total net change in book of business
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total new and expansion net bookings
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total total churn and contraction net bookings
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Total total impact from other sources
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Fiscal Year Quarter Label
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total impact from missing and erroneous quotelines
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total impact from missing opportunities
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total impact from multiyear deals
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total impact from stub deals
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total net change in book of business
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total new and expansion net bookings
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total total churn and contraction net bookings
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total total impact from other sources
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Fiscal Year Quarter Label
+        - Total new and expansion net bookings
+        - Total total churn and contraction net bookings
+        - Total impact from missing opportunities
+        - Total impact from missing and erroneous quotelines
+        - Total impact from multiyear deals
+        - Total impact from stub deals
+        - Total total impact from other sources
+        - Total net change in book of business
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"Total new and expansion net bookings\",\"columnProperty\": {}},{\"columnId\": \"Total total churn and contraction net bookings\",\"columnProperty\": {}},{\"columnId\": \"Total impact from missing opportunities\",\"columnProperty\": {}},{\"columnId\": \"Total impact from missing and erroneous quotelines\",\"columnProperty\": {}},{\"columnId\": \"Total impact from multiyear deals\",\"columnProperty\": {}},{\"columnId\": \"Total impact from stub deals\",\"columnProperty\": {}},{\"columnId\": \"Total total impact from other sources\",\"columnProperty\": {}},{\"columnId\": \"Total net change in book of business\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Fiscal Year Quarter Label
+        - column_id: Total impact from missing and erroneous quotelines
+        - column_id: Total impact from missing opportunities
+        - column_id: Total impact from multiyear deals
+        - column_id: Total impact from stub deals
+        - column_id: Total net change in book of business
+        - column_id: Total new and expansion net bookings
+        - column_id: Total total churn and contraction net bookings
+        - column_id: Total total impact from other sources
+        axis_configs:
+        - x:
+          - Fiscal Year Quarter Label
+          "y":
+          - Total new and expansion net bookings
+          - Total total churn and contraction net bookings
+          - Total impact from missing opportunities
+          - Total impact from missing and erroneous quotelines
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"Total new and expansion net bookings\",\"columnProperty\": {}},{\"columnId\": \"Total total churn and contraction net bookings\",\"columnProperty\": {}},{\"columnId\": \"Total impact from missing opportunities\",\"columnProperty\": {}},{\"columnId\": \"Total impact from missing and erroneous quotelines\",\"columnProperty\": {}},{\"columnId\": \"Total impact from multiyear deals\",\"columnProperty\": {}},{\"columnId\": \"Total impact from stub deals\",\"columnProperty\": {}},{\"columnId\": \"Total total impact from other sources\",\"columnProperty\": {}},{\"columnId\": \"Total net change in book of business\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"475c2e87-23d9-4f91-9f74-49f9095d503b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total new and expansion net bookings\"],\"isOpposite\": false}},{\"id\": \"eda1376c-d1b4-46ea-992b-26f84b989bd0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total total churn and contraction net bookings\"],\"isOpposite\": true}},{\"id\": \"516362aa-662e-4c69-ae96-53a5ba9b7bb7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total impact from missing opportunities\"],\"isOpposite\": true}},{\"id\": \"bfdd9278-6390-46f1-877c-46bd61fd88f1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total impact from missing and erroneous quotelines\"],\"isOpposite\": true}},{\"id\": \"80a20ea0-94c6-4942-a3c8-cecd5e60242f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fiscal Year Quarter Label\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: fd97c5a3-0b34-40e6-a7cc-8d0ef5b0d1d3
+  - id: Viz_4
+    answer:
+      name: "Fiscal Year Quarter Label, Book Of Business"
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      search_query: "[Fiscal Year Quarter Label] [Book of Business*]"
+      answer_columns:
+      - name: Fiscal Year Quarter Label
+      - name: Total Book of Business*
+      table:
+        table_columns:
+        - column_id: Fiscal Year Quarter Label
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Book of Business*
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Fiscal Year Quarter Label
+        - Total Book of Business*
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Fiscal Year Quarter Label
+        - column_id: Total Book of Business*
+        axis_configs:
+        - x:
+          - Fiscal Year Quarter Label
+          "y":
+          - Total Book of Business*
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"Total Book of Business*\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a79ebe8-3fd9-49c1-a0b7-fb1309e98d7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Book of Business*\"],\"isOpposite\": false}},{\"id\": \"f42c8ade-5f2f-4fae-a59c-60c980be3089\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fiscal Year Quarter Label\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 189e43f4-1b74-40ac-960d-7b93df1f7ee1
+  - id: Viz_5
+    answer:
+      name: Total Contraction + Churn NARR
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      formulas:
+      - id: kpi Contraction + Churn
+        name: kpi Contraction + Churn
+        expr: "[Contraction Narr] + [Churn Narr]"
+        was_auto_generated: false
+      - id: kpi_total_new_and_expansion_narr
+        name: kpi_total_new_and_expansion_narr
+        expr: "[New Narr] + [Expansion NARR] "
+        was_auto_generated: false
+      search_query: "[kpi Contraction + Churn]"
+      answer_columns:
+      - name: Total kpi Contraction + Churn
+      table:
+        table_columns:
+        - column_id: Total kpi Contraction + Churn
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Total kpi Contraction + Churn
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total kpi Contraction + Churn
+        axis_configs:
+        - "y":
+          - Total kpi Contraction + Churn
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total kpi Contraction + Churn\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fb627c2d-967c-4145-8e23-67f9ed3e61df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total kpi Contraction + Churn\"],\"isOpposite\": false}},{\"id\": \"288b45b9-a20a-4f04-af59-c781eacf222f\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 39399708-11cb-4dfa-96ef-d386fa945511
+  - id: Viz_6
+    answer:
+      name: '# of Customers'
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      formulas:
+      - id: kpi_total_new_and_expansion_narr
+        name: kpi_total_new_and_expansion_narr
+        expr: "[New Narr] + [Expansion NARR] "
+        was_auto_generated: false
+      search_query: "[Num Customers]"
+      answer_columns:
+      - name: Total Num Customers
+      table:
+        table_columns:
+        - column_id: Total Num Customers
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Num Customers
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Num Customers
+        axis_configs:
+        - "y":
+          - Total Num Customers
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: b3fc3bce-640c-447e-a4a3-84e8d5deb227
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: EXTRA_SMALL
+    - visualization_id: Viz_6
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
+      size: LARGE
+    - visualization_id: Viz_3
+      size: LARGE
+    - visualization_id: Viz_4
+      size: LARGE

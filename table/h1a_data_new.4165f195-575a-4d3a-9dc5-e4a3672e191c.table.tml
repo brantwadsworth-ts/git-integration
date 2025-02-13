@@ -285,6 +285,13 @@ table:
       index_type: DONT_INDEX
     db_column_properties:
       data_type: DOUBLE
+  joins_with:
+  - name: date
+    destination:
+      name: h1_dat_dim
+      fqn: 1f3ebdb0-d96b-4b22-837a-fb0045bb93a0
+    "on": "[h1a_data_new::DATE] = [h1_dat_dim::date]"
+    type: INNER
   dataset_id: 6222b25fb1ca
   properties:
     sage_config:

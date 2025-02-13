@@ -1,9 +1,28 @@
 guid: 9657f3a9-2584-4ba3-ae2a-556b628994e7
 model:
   name: H1 Sample
+  description: The worksheet titled "H1 Sample" provides a comprehensive overview
+    of business performance metrics, focusing on customer and financial data across
+    various regions and industries. It includes detailed records of customer transactions,
+    such as new acquisitions, losses, and expansions, along with the financial impact
+    of these changes over different fiscal quarters. Additionally, the worksheet tracks
+    the performance of different books of business, assessing quarterly differences
+    and overall impacts on revenue. (AI generated)
   model_tables:
   - name: h1a_data_new
     fqn: 4165f195-575a-4d3a-9dc5-e4a3672e191c
+    joins:
+    - with: h1_dat_dim
+      referencing_join: date
+  - name: h1_dat_dim
+    fqn: 1f3ebdb0-d96b-4b22-837a-fb0045bb93a0
+  formulas:
+  - id: Book of Business*
+    name: Book of Business*
+    expr: 'to_double ( [h1a_data_new::BOOK_OF_BUSINESS] ) '
+  - id: sample param
+    name: sample param
+    expr: '[target] / [h1a_data_new::NET_NARR] '
   columns:
   - name: Expansion NARR
     column_id: h1a_data_new::EXPANSION_NARR
@@ -13,6 +32,18 @@ model:
       index_type: DONT_INDEX
       synonyms:
       - Expansion NARR
+  - name: Book of Business*
+    formula_id: Book of Business*
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: sample param
+    formula_id: sample param
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
   - name: Multiyear Impact
     column_id: h1a_data_new::MULTIYEAR_IMPACT
     properties:
@@ -166,12 +197,6 @@ model:
       synonyms:
       - Won Back Parent
       - Regained Parent
-      synonym_type: AUTO_GENERATED
-  - name: Date
-    column_id: h1a_data_new::DATE
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
       synonym_type: AUTO_GENERATED
   - name: Fiscal Year Quarter Label
     column_id: h1a_data_new::FISCAL_YEAR_QUARTER_LABEL
@@ -347,8 +372,178 @@ model:
       - Added Customer
       - New Customer
       synonym_type: AUTO_GENERATED
+  - name: Date
+    column_id: h1_dat_dim::date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Week Number Of Year
+    column_id: h1_dat_dim::week_number_of_year
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Day Number Of Year
+    column_id: h1_dat_dim::day_number_of_year
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Start Of Month Epoch
+    column_id: h1_dat_dim::start_of_month_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Month Number Of Year
+    column_id: h1_dat_dim::month_number_of_year
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Monthly
+    column_id: h1_dat_dim::monthly
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: End Of Quarter Epoch
+    column_id: h1_dat_dim::end_of_quarter_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Quarter Number Of Year
+    column_id: h1_dat_dim::quarter_number_of_year
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Absolute Quarter Number
+    column_id: h1_dat_dim::absolute_quarter_number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Absolute Year Number
+    column_id: h1_dat_dim::absolute_year_number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Week Number Of Quarter
+    column_id: h1_dat_dim::week_number_of_quarter
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Day Number Of Week
+    column_id: h1_dat_dim::day_number_of_week
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Month Number Of Quarter
+    column_id: h1_dat_dim::month_number_of_quarter
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Day Of Week
+    column_id: h1_dat_dim::day_of_week
+    properties:
+      column_type: ATTRIBUTE
+  - name: Day Number Of Month
+    column_id: h1_dat_dim::day_number_of_month
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Is Weekend
+    column_id: h1_dat_dim::is_weekend
+    properties:
+      column_type: ATTRIBUTE
+  - name: Absolute Month Number
+    column_id: h1_dat_dim::absolute_month_number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Year
+    column_id: h1_dat_dim::year
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Start Of Quarter Epoch
+    column_id: h1_dat_dim::start_of_quarter_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Day Number Of Quarter
+    column_id: h1_dat_dim::day_number_of_quarter
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: End Of Year Epoch
+    column_id: h1_dat_dim::end_of_year_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Quarterly
+    column_id: h1_dat_dim::quarterly
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week Number Of Month
+    column_id: h1_dat_dim::week_number_of_month
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Month
+    column_id: h1_dat_dim::month
+    properties:
+      column_type: ATTRIBUTE
+  - name: Absolute Week Number
+    column_id: h1_dat_dim::absolute_week_number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: End Of Week Epoch
+    column_id: h1_dat_dim::end_of_week_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Start Of Week Epoch
+    column_id: h1_dat_dim::start_of_week_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Start Of Year Epoch
+    column_id: h1_dat_dim::start_of_year_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Quarter
+    column_id: h1_dat_dim::quarter
+    properties:
+      column_type: ATTRIBUTE
+  - name: End Of Month Epoch
+    column_id: h1_dat_dim::end_of_month_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
   properties:
     is_bypass_rls: false
     join_progressive: true
     sage_config:
       is_sage_enabled: true
+  parameters:
+  - id: ccff8f6a-bd39-42fd-bded-248cabd553f4
+    name: target
+    data_type: DOUBLE
+    default_value: '0.1'
+    list_config:
+      list_choice:
+      - value: '0.1'
+        display_name: ''
+    description: ''

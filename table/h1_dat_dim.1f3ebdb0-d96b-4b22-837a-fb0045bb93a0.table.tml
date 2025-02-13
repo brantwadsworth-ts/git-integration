@@ -1,0 +1,219 @@
+guid: 1f3ebdb0-d96b-4b22-837a-fb0045bb93a0
+table:
+  name: h1_dat_dim
+  db: as_h1_primary
+  schema: brantwadsworth463
+  db_table: h1_dat_dim
+  connection:
+    name: AnalystStudio_connection
+    fqn: 116f84bb-0f62-447c-b737-20fcd03cb0bb
+  columns:
+  - name: date
+    db_column_name: date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: day_of_week
+    db_column_name: day_of_week
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: month
+    db_column_name: month
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: quarter
+    db_column_name: quarter
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: year
+    db_column_name: year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: day_number_of_week
+    db_column_name: day_number_of_week
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: week_number_of_month
+    db_column_name: week_number_of_month
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: week_number_of_quarter
+    db_column_name: week_number_of_quarter
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: week_number_of_year
+    db_column_name: week_number_of_year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: is_weekend
+    db_column_name: is_weekend
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: monthly
+    db_column_name: monthly
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: quarterly
+    db_column_name: quarterly
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: day_number_of_month
+    db_column_name: day_number_of_month
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: day_number_of_quarter
+    db_column_name: day_number_of_quarter
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: day_number_of_year
+    db_column_name: day_number_of_year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: month_number_of_quarter
+    db_column_name: month_number_of_quarter
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: month_number_of_year
+    db_column_name: month_number_of_year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: quarter_number_of_year
+    db_column_name: quarter_number_of_year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: absolute_week_number
+    db_column_name: absolute_week_number
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: start_of_week_epoch
+    db_column_name: start_of_week_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: end_of_week_epoch
+    db_column_name: end_of_week_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: absolute_month_number
+    db_column_name: absolute_month_number
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: start_of_month_epoch
+    db_column_name: start_of_month_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: end_of_month_epoch
+    db_column_name: end_of_month_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: absolute_quarter_number
+    db_column_name: absolute_quarter_number
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: start_of_quarter_epoch
+    db_column_name: start_of_quarter_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: end_of_quarter_epoch
+    db_column_name: end_of_quarter_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: absolute_year_number
+    db_column_name: absolute_year_number
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: start_of_year_epoch
+    db_column_name: start_of_year_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: end_of_year_epoch
+    db_column_name: end_of_year_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  dataset_id: a88f7533f45f
+  properties:
+    sage_config:
+      is_sage_enabled: false
