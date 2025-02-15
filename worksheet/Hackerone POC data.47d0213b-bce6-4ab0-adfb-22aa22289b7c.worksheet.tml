@@ -1,0 +1,383 @@
+guid: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+model:
+  name: Hackerone POC data
+  model_tables:
+  - name: hackerone_data
+    fqn: 9823576d-9946-48a7-8b08-c8806b3060e6
+    joins:
+    - with: h1_date_dim
+      'on': '[hackerone_data::DATE] = [h1_date_dim::DATE]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+  - name: h1_date_dim
+    fqn: 74e62540-2142-425c-bcea-cfce4ff99c5f
+  formulas:
+  - id: Number of Brand
+    name: Number of Brand
+    expr: 'count ( [hackerone_data::ACCOUNT_BAND] ) '
+  columns:
+  - name: Num Of New And Expansion Deals
+    column_id: hackerone_data::NUM_OF_NEW_AND_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Fiscal Quarter Number
+    column_id: h1_date_dim::FISCAL_QUARTER_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Fiscal Year
+    column_id: h1_date_dim::FISCAL_YEAR
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: First Day Of Fiscal Quarter
+    column_id: h1_date_dim::FIRST_DAY_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Is Last Day Of Fiscal Quarter Up To Current Date
+    column_id: h1_date_dim::IS_LAST_DAY_OF_FISCAL_QUARTER_UP_TO_CURRENT_DATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Year Mon Label
+    column_id: h1_date_dim::YEAR_MON_LABEL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Fiscal Year Quarter Label
+    column_id: h1_date_dim::FISCAL_YEAR_QUARTER_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Day Of The Month Number
+    column_id: h1_date_dim::DAY_OF_THE_MONTH_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Last Day Of Fiscal Quarter
+    column_id: h1_date_dim::LAST_DAY_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Day Of Fiscal Quarter
+    column_id: h1_date_dim::DAY_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year Quarter Label
+    column_id: h1_date_dim::YEAR_QUARTER_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Fiscal Year Mon Label
+    column_id: h1_date_dim::FISCAL_YEAR_MON_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Is Last Month Of Fiscal Quarter
+    column_id: h1_date_dim::IS_LAST_MONTH_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+  - name: Is Last Month Of Fiscal Quarter Or Current Month
+    column_id: h1_date_dim::IS_LAST_MONTH_OF_FISCAL_QUARTER_OR_CURRENT_MONTH
+    properties:
+      column_type: ATTRIBUTE
+  - name: Day Of Week Number
+    column_id: h1_date_dim::DAY_OF_WEEK_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Day Of Week Name
+    column_id: h1_date_dim::DAY_OF_WEEK_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Quarter
+    column_id: h1_date_dim::QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Month Name
+    column_id: h1_date_dim::MONTH_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Month Year
+    column_id: h1_date_dim::MONTH_YEAR
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year Period Label
+    column_id: h1_date_dim::YEAR_PERIOD_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Fiscal Quarter
+    column_id: h1_date_dim::FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Week Of Fiscal Quarter
+    column_id: h1_date_dim::WEEK_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year
+    column_id: h1_date_dim::YEAR
+    properties:
+      column_type: ATTRIBUTE
+  - name: Fiscal Month Number
+    column_id: h1_date_dim::FISCAL_MONTH_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Fiscal Month Name
+    column_id: h1_date_dim::FISCAL_MONTH_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week Number
+    column_id: h1_date_dim::WEEK_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Is Last Day Of Month Up To Current Date
+    column_id: h1_date_dim::IS_LAST_DAY_OF_MONTH_UP_TO_CURRENT_DATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Is Past Or Current Quarter
+    column_id: h1_date_dim::IS_PAST_OR_CURRENT_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+  - name: Half Year Indicator
+    column_id: h1_date_dim::HALF_YEAR_INDICATOR
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Last Day Of Month
+    column_id: h1_date_dim::LAST_DAY_OF_MONTH
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year Month
+    column_id: h1_date_dim::YEAR_MONTH
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Fiscal Year Period Label
+    column_id: h1_date_dim::FISCAL_YEAR_PERIOD_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Date
+    column_id: h1_date_dim::DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Fiscal Period
+    column_id: h1_date_dim::FISCAL_PERIOD
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Month Number
+    column_id: h1_date_dim::MONTH_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Num Won Back Parent
+    column_id: hackerone_data::NUM_WON_BACK_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Multiyear Impact
+    column_id: hackerone_data::MULTIYEAR_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Net Impact
+    column_id: hackerone_data::NET_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Account Band
+    column_id: hackerone_data::ACCOUNT_BAND
+    properties:
+      column_type: ATTRIBUTE
+  - name: Num Won Back Customer
+    column_id: hackerone_data::NUM_WON_BACK_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Missing Opportunities Impact
+    column_id: hackerone_data::MISSING_OPPORTUNITIES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Quarterly Overall Contraction And Churn Quota Value
+    column_id: hackerone_data::QUARTERLY_OVERALL_CONTRACTION_AND_CHURN_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Booking Amount
+    column_id: hackerone_data::TOTAL_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Other Impact
+    column_id: hackerone_data::OTHER_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Lost Customer
+    column_id: hackerone_data::NUM_LOST_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Of New Deals
+    column_id: hackerone_data::NUM_OF_NEW_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total New Booking Amount
+    column_id: hackerone_data::TOTAL_NEW_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Quarterly Overall New And Upsell Quota Value
+    column_id: hackerone_data::QUARTERLY_OVERALL_NEW_AND_UPSELL_QUOTA_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Added Customer
+    column_id: hackerone_data::NUM_ADDED_CUSTOMER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Book Of Business
+    column_id: hackerone_data::BOOK_OF_BUSINESS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Stub Deals Impact
+    column_id: hackerone_data::STUB_DEALS_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Expansion Booking Amount
+    column_id: hackerone_data::TOTAL_EXPANSION_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Expansion Narr
+    column_id: hackerone_data::EXPANSION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Account Regions
+    column_id: hackerone_data::ACCOUNT_REGIONS
+    properties:
+      column_type: ATTRIBUTE
+  - name: Num Of Expansion Deals
+    column_id: hackerone_data::NUM_OF_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Account Industry
+    column_id: hackerone_data::ACCOUNT_INDUSTRY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Churn Narr
+    column_id: hackerone_data::CHURN_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Added Parent
+    column_id: hackerone_data::NUM_ADDED_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Missing And Erronous Quotelines Impact
+    column_id: hackerone_data::MISSING_AND_ERRONOUS_QUOTELINES_IMPACT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Lost Parent
+    column_id: hackerone_data::NUM_LOST_PARENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Contraction Narr
+    column_id: hackerone_data::CONTRACTION_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Book Of Business Quarterly Difference
+    column_id: hackerone_data::BOOK_OF_BUSINESS_QUARTERLY_DIFFERENCE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Parent Companies
+    column_id: hackerone_data::NUM_PARENT_COMPANIES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Net Narr
+    column_id: hackerone_data::NET_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: New Narr
+    column_id: hackerone_data::NEW_NARR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Renewable Booking Amount
+    column_id: hackerone_data::RENEWABLE_BOOKING_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Num Customers
+    column_id: hackerone_data::NUM_CUSTOMERS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Opportunities Sold
+    column_id: hackerone_data::TOTAL_OPPORTUNITIES_SOLD
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Number of Brand
+    formula_id: Number of Brand
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: false

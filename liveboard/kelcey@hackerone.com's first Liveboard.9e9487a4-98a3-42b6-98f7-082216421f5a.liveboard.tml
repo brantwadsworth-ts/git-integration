@@ -369,6 +369,54 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: b3fc3bce-640c-447e-a4a3-84e8d5deb227
+  - id: Viz_6
+    answer:
+      name: Total % of Quarter by Day Of Fiscal Quarter
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      formulas:
+      - id: '% of Quarter'
+        name: '% of Quarter'
+        expr: "[Day Of Fiscal Quarter] / [Days of Fiscal Quarter] "
+        was_auto_generated: false
+      - id: Days of Fiscal Quarter
+        name: Days of Fiscal Quarter
+        expr: "diff_days ( [Last Day Of Fiscal Quarter] , [First Day Of Fiscal Quarter]  )"
+        was_auto_generated: false
+      search_query: "[Day Of Fiscal Quarter] [Date].today [% of Quarter]"
+      answer_columns:
+      - name: Day Of Fiscal Quarter
+      - name: Total % of Quarter
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Day Of Fiscal Quarter
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total % of Quarter
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Day Of Fiscal Quarter
+        - Total % of Quarter
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Day Of Fiscal Quarter
+        - column_id: Total % of Quarter
+        axis_configs:
+        - x:
+          - Day Of Fiscal Quarter
+          "y":
+          - Total % of Quarter
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 8583364b-ada0-45e0-86cb-14ebcb82a1b7
   layout:
     tiles:
     - visualization_id: Viz_1
