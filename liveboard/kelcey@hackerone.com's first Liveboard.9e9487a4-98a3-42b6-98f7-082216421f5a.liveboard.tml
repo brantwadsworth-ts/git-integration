@@ -301,42 +301,6 @@ liveboard:
     viz_guid: fd97c5a3-0b34-40e6-a7cc-8d0ef5b0d1d3
   - id: Viz_4
     answer:
-      name: "Fiscal Year Quarter Label, Book Of Business"
-      tables:
-      - id: H1 Sample
-        name: H1 Sample
-        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
-      search_query: "[Fiscal Year Quarter Label] [Book of Business*]"
-      answer_columns:
-      - name: Fiscal Year Quarter Label
-      - name: Total Book of Business*
-      table:
-        table_columns:
-        - column_id: Fiscal Year Quarter Label
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Book of Business*
-          headline_aggregation: TABLE_AGGR
-        ordered_column_ids:
-        - Fiscal Year Quarter Label
-        - Total Book of Business*
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}}]}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Fiscal Year Quarter Label
-        - column_id: Total Book of Business*
-        axis_configs:
-        - x:
-          - Fiscal Year Quarter Label
-          "y":
-          - Total Book of Business*
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Fiscal Year Quarter Label\",\"columnProperty\": {}},{\"columnId\": \"Total Book of Business*\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a79ebe8-3fd9-49c1-a0b7-fb1309e98d7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Book of Business*\"],\"isOpposite\": false}},{\"id\": \"f42c8ade-5f2f-4fae-a59c-60c980be3089\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fiscal Year Quarter Label\"]}}]}"
-      display_mode: CHART_MODE
-    viz_guid: 189e43f4-1b74-40ac-960d-7b93df1f7ee1
-  - id: Viz_5
-    answer:
       name: Total Contraction + Churn NARR
       tables:
       - id: H1 Sample
@@ -373,7 +337,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total kpi Contraction + Churn\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fb627c2d-967c-4145-8e23-67f9ed3e61df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total kpi Contraction + Churn\"],\"isOpposite\": false}},{\"id\": \"288b45b9-a20a-4f04-af59-c781eacf222f\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 39399708-11cb-4dfa-96ef-d386fa945511
-  - id: Viz_6
+  - id: Viz_5
     answer:
       name: '# of Customers'
       tables:
@@ -409,13 +373,11 @@ liveboard:
     tiles:
     - visualization_id: Viz_1
       size: EXTRA_SMALL
-    - visualization_id: Viz_5
+    - visualization_id: Viz_4
       size: EXTRA_SMALL
-    - visualization_id: Viz_6
+    - visualization_id: Viz_5
       size: EXTRA_SMALL
     - visualization_id: Viz_2
       size: LARGE
     - visualization_id: Viz_3
-      size: LARGE
-    - visualization_id: Viz_4
       size: LARGE
