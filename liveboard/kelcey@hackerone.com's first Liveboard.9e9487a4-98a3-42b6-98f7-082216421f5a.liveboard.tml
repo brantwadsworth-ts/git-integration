@@ -483,6 +483,11 @@ liveboard:
       "y": 7
       height: 8
       width: 12
+    - visualization_id: Viz_7
+      x: 6
+      "y": 2
+      height: 2
+      width: 3
     - visualization_id: Viz_1
       x: 0
       "y": 5
