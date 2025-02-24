@@ -463,38 +463,17 @@ liveboard:
     viz_guid: 7e7dd41e-f687-4815-9145-14a94dc99d06
   layout:
     tiles:
-    - visualization_id: Viz_3
-      x: 0
-      "y": 15
-      height: 8
-      width: 12
-    - visualization_id: Viz_4
-      x: 3
-      "y": 5
-      height: 2
-      width: 3
-    - visualization_id: Viz_5
-      x: 6
-      "y": 0
-      height: 2
-      width: 3
-    - visualization_id: Viz_2
-      x: 0
-      "y": 7
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 6
-      "y": 2
-      height: 2
-      width: 3
-    - visualization_id: Viz_1
-      x: 0
-      "y": 5
-      height: 2
-      width: 3
     - visualization_id: Viz_6
-      x: 0
-      "y": 0
-      height: 5
-      width: 6
+      size: LARGE_SMALL
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: EXTRA_SMALL
+    - visualization_id: Viz_7
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
+      size: LARGE
+    - visualization_id: Viz_3
+      size: LARGE
