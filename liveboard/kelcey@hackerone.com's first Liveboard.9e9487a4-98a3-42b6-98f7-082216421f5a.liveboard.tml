@@ -421,6 +421,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day Of Fiscal Quarter\",\"columnProperty\": {}},{\"columnId\": \"Total % of Quarter\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"41b8685b-c886-47a5-9d3a-0a482bed09db\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % of Quarter\"],\"format\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 0.0},\"isCategoryEditable\": true},\"name\": \"% Into Fiscal Quarter\",\"yAxisRange\": {\"max\": 1.0},\"isOpposite\": false}},{\"id\": \"5b77280e-b852-4bcf-bdc8-5fff6165aed3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day Of Fiscal Quarter\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\",\\\"fontSize\\\":\\\"16\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total % of Quarter\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8583364b-ada0-45e0-86cb-14ebcb82a1b7
+  - id: Viz_7
+    answer:
+      name: Book of Business
+      tables:
+      - id: H1 Sample
+        name: H1 Sample
+        fqn: 9657f3a9-2584-4ba3-ae2a-556b628994e7
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      table_paths:
+      - id: H1 Sample_1
+        table: H1 Sample
+      - id: Hackerone POC data_1
+        table: Hackerone POC data
+      formulas:
+      - id: kpi_total_new_and_expansion_narr
+        name: kpi_total_new_and_expansion_narr
+        expr: "[H1 Sample_1::New Narr] + [H1 Sample_1::Expansion NARR] "
+        was_auto_generated: false
+      search_query: "[Hackerone POC data_1::Book Of Business]"
+      answer_columns:
+      - name: Total Book Of Business
+      table:
+        table_columns:
+        - column_id: Total Book Of Business
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Book Of Business
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Book Of Business
+        axis_configs:
+        - "y":
+          - Total Book Of Business
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 7e7dd41e-f687-4815-9145-14a94dc99d06
   layout:
     tiles:
     - visualization_id: Viz_3
