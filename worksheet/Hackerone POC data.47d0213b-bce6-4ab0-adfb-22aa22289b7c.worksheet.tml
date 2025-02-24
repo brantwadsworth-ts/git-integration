@@ -16,63 +16,16 @@ model:
     name: Number of Brand
     expr: 'count ( [hackerone_data::ACCOUNT_BAND] ) '
   columns:
-  - name: Num Of New And Expansion Deals
-    column_id: hackerone_data::NUM_OF_NEW_AND_EXPANSION_DEALS
+  - name: Fiscal Year Period Label
+    column_id: h1_date_dim::FISCAL_YEAR_PERIOD_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Number of Brand
+    formula_id: Number of Brand
     properties:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
-  - name: Fiscal Quarter Number
-    column_id: h1_date_dim::FISCAL_QUARTER_NUMBER
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Fiscal Year
-    column_id: h1_date_dim::FISCAL_YEAR
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: First Day Of Fiscal Quarter
-    column_id: h1_date_dim::FIRST_DAY_OF_FISCAL_QUARTER
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Is Last Day Of Fiscal Quarter Up To Current Date
-    column_id: h1_date_dim::IS_LAST_DAY_OF_FISCAL_QUARTER_UP_TO_CURRENT_DATE
-    properties:
-      column_type: ATTRIBUTE
-  - name: Year Mon Label
-    column_id: h1_date_dim::YEAR_MON_LABEL
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Fiscal Year Quarter Label
-    column_id: h1_date_dim::FISCAL_YEAR_QUARTER_LABEL
-    properties:
-      column_type: ATTRIBUTE
-  - name: Day Of The Month Number
-    column_id: h1_date_dim::DAY_OF_THE_MONTH_NUMBER
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Last Day Of Fiscal Quarter
-    column_id: h1_date_dim::LAST_DAY_OF_FISCAL_QUARTER
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Day Of Fiscal Quarter
-    column_id: h1_date_dim::DAY_OF_FISCAL_QUARTER
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Year Quarter Label
-    column_id: h1_date_dim::YEAR_QUARTER_LABEL
-    properties:
-      column_type: ATTRIBUTE
-  - name: Fiscal Year Mon Label
-    column_id: h1_date_dim::FISCAL_YEAR_MON_LABEL
-    properties:
-      column_type: ATTRIBUTE
   - name: Is Last Month Of Fiscal Quarter
     column_id: h1_date_dim::IS_LAST_MONTH_OF_FISCAL_QUARTER
     properties:
@@ -81,33 +34,21 @@ model:
     column_id: h1_date_dim::IS_LAST_MONTH_OF_FISCAL_QUARTER_OR_CURRENT_MONTH
     properties:
       column_type: ATTRIBUTE
-  - name: Day Of Week Number
-    column_id: h1_date_dim::DAY_OF_WEEK_NUMBER
+  - name: Day Of The Month Number
+    column_id: h1_date_dim::DAY_OF_THE_MONTH_NUMBER
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Day Of Week Name
-    column_id: h1_date_dim::DAY_OF_WEEK_NAME
-    properties:
-      column_type: ATTRIBUTE
-  - name: Quarter
-    column_id: h1_date_dim::QUARTER
+  - name: Year Month
+    column_id: h1_date_dim::YEAR_MONTH
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Month Name
-    column_id: h1_date_dim::MONTH_NAME
-    properties:
-      column_type: ATTRIBUTE
-  - name: Month Year
-    column_id: h1_date_dim::MONTH_YEAR
+  - name: Fiscal Quarter Number
+    column_id: h1_date_dim::FISCAL_QUARTER_NUMBER
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Year Period Label
-    column_id: h1_date_dim::YEAR_PERIOD_LABEL
-    properties:
-      column_type: ATTRIBUTE
   - name: Fiscal Quarter
     column_id: h1_date_dim::FISCAL_QUARTER
     properties:
@@ -122,8 +63,54 @@ model:
     column_id: h1_date_dim::YEAR
     properties:
       column_type: ATTRIBUTE
+  - name: Quarter
+    column_id: h1_date_dim::QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Month Name
+    column_id: h1_date_dim::MONTH_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Fiscal Period
+    column_id: h1_date_dim::FISCAL_PERIOD
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Number New And Expansion Deals
+    column_id: hackerone_data::NUM_OF_NEW_AND_EXPANSION_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Last Day Of Fiscal Quarter
+    column_id: h1_date_dim::LAST_DAY_OF_FISCAL_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Is Past Or Current Quarter
+    column_id: h1_date_dim::IS_PAST_OR_CURRENT_QUARTER
+    properties:
+      column_type: ATTRIBUTE
+  - name: Year Quarter Label
+    column_id: h1_date_dim::YEAR_QUARTER_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Is Last Day Of Month Up To Current Date
+    column_id: h1_date_dim::IS_LAST_DAY_OF_MONTH_UP_TO_CURRENT_DATE
+    properties:
+      column_type: ATTRIBUTE
   - name: Fiscal Month Number
     column_id: h1_date_dim::FISCAL_MONTH_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Is Last Day Of Fiscal Quarter Up To Current Date
+    column_id: h1_date_dim::IS_LAST_DAY_OF_FISCAL_QUARTER_UP_TO_CURRENT_DATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Month Year
+    column_id: h1_date_dim::MONTH_YEAR
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
@@ -131,21 +118,37 @@ model:
     column_id: h1_date_dim::FISCAL_MONTH_NAME
     properties:
       column_type: ATTRIBUTE
+  - name: Day Of Week Number
+    column_id: h1_date_dim::DAY_OF_WEEK_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Half Year Indicator
+    column_id: h1_date_dim::HALF_YEAR_INDICATOR
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Date
+    column_id: h1_date_dim::DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year Mon Label
+    column_id: h1_date_dim::YEAR_MON_LABEL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Day Of Week Name
+    column_id: h1_date_dim::DAY_OF_WEEK_NAME
+    properties:
+      column_type: ATTRIBUTE
   - name: Week Number
     column_id: h1_date_dim::WEEK_NUMBER
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Is Last Day Of Month Up To Current Date
-    column_id: h1_date_dim::IS_LAST_DAY_OF_MONTH_UP_TO_CURRENT_DATE
-    properties:
-      column_type: ATTRIBUTE
-  - name: Is Past Or Current Quarter
-    column_id: h1_date_dim::IS_PAST_OR_CURRENT_QUARTER
-    properties:
-      column_type: ATTRIBUTE
-  - name: Half Year Indicator
-    column_id: h1_date_dim::HALF_YEAR_INDICATOR
+  - name: Day Of Fiscal Quarter
+    column_id: h1_date_dim::DAY_OF_FISCAL_QUARTER
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
@@ -154,22 +157,21 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Year Month
-    column_id: h1_date_dim::YEAR_MONTH
+  - name: Year Period Label
+    column_id: h1_date_dim::YEAR_PERIOD_LABEL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Fiscal Year
+    column_id: h1_date_dim::FISCAL_YEAR
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Fiscal Year Period Label
-    column_id: h1_date_dim::FISCAL_YEAR_PERIOD_LABEL
+  - name: Fiscal Year Quarter Label
+    column_id: h1_date_dim::FISCAL_YEAR_QUARTER_LABEL
     properties:
       column_type: ATTRIBUTE
-  - name: Date
-    column_id: h1_date_dim::DATE
-    properties:
-      column_type: ATTRIBUTE
-      index_type: DONT_INDEX
-  - name: Fiscal Period
-    column_id: h1_date_dim::FISCAL_PERIOD
+  - name: First Day Of Fiscal Quarter
+    column_id: h1_date_dim::FIRST_DAY_OF_FISCAL_QUARTER
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
@@ -178,6 +180,10 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+  - name: Fiscal Year Mon Label
+    column_id: h1_date_dim::FISCAL_YEAR_MON_LABEL
+    properties:
+      column_type: ATTRIBUTE
   - name: Num Won Back Parent
     column_id: hackerone_data::NUM_WON_BACK_PARENT
     properties:
@@ -370,14 +376,8 @@ model:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
-  - name: Number of Brand
-    formula_id: Number of Brand
-    properties:
-      column_type: MEASURE
-      aggregation: SUM
-      index_type: DONT_INDEX
   properties:
     is_bypass_rls: false
     join_progressive: true
     sage_config:
-      is_sage_enabled: false
+      is_sage_enabled: true
