@@ -301,7 +301,7 @@ liveboard:
     viz_guid: fd97c5a3-0b34-40e6-a7cc-8d0ef5b0d1d3
   - id: Viz_4
     answer:
-      name: QtD Contraction + Churn NARR
+      name: Contraction + Churn NARR
       tables:
       - id: H1 Sample
         name: H1 Sample
