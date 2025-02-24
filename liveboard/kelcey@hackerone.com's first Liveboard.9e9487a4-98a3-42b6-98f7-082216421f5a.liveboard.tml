@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: QtD Total New + Expansion NARR
+      name: QtD New + Expansion NARR
       tables:
       - id: H1 Sample
         name: H1 Sample
