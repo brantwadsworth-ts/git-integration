@@ -17,6 +17,14 @@ liveboard:
       search_query: "[kpi_total_new_and_expansion_narr]"
       answer_columns:
       - name: Total kpi_total_new_and_expansion_narr
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
       table:
         table_columns:
         - column_id: Total kpi_total_new_and_expansion_narr
