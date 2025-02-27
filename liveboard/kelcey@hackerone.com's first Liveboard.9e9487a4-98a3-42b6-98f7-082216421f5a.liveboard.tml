@@ -489,6 +489,22 @@ liveboard:
     viz_guid: 6e0126d7-e1d4-42f8-a1f4-9ee372c9490b
     note_tile:
       html_parsed_string: "<h3 dir=\"ltr\"><i><b><strong class=\"theme-module__editor-text-bold theme-module__editor-text-italic\" style=\"white-space: pre-wrap;\">**FY26 Quotas are pending from the business</strong></b></i><span style=\"white-space: pre-wrap;\">**</span><i><em class=\"theme-module__editor-text-italic\" style=\"white-space: pre-wrap;\"> go/</em></i><a href=\"https://google.com\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><i><em class=\"theme-module__editor-text-italic\" style=\"white-space: pre-wrap;\">starwarsmetrics</em></i></a></h3><ul><li value=\"1\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">Star Wars Company Metrics reports on key Star Wars Bookings, Book of Business, and Customer metrics near real-time.</span></li><li value=\"2\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">Ask questions and share feedback with us in Slack!</span></li><li value=\"3\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">See definitions at the bottom of this page.</span></li><li value=\"4\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">KPIs will always be quarter to date at the highest aggregation, not impacted by filters.</span></li><li value=\"5\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">Take a few steps to set up the GoLinks Chrome extension by reading GoLinks.</span></li><li value=\"6\"><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div><span style=\"white-space: pre-wrap;\">In the 1st month of the fiscal quarter, revenue metrics are forecasted. After the first month, numbers switch to the latest posted metrics, which will generally be slightly higher.</span></li></ul><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  filters:
+  - column:
+    - H1 Sample::Account Band
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - H1 Sample::Account Industry
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - H1 Sample::Account Regions
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_3
@@ -531,3 +547,10 @@ liveboard:
       "y": 0
       height: 4
       width: 6
+  ordered_chips:
+  - name: H1 Sample::Account Band
+    type: FILTER
+  - name: H1 Sample::Account Industry
+    type: FILTER
+  - name: H1 Sample::Account Regions
+    type: FILTER
