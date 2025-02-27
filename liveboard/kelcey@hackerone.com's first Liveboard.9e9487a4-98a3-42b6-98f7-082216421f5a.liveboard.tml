@@ -326,6 +326,14 @@ liveboard:
       search_query: "[kpi Contraction + Churn]"
       answer_columns:
       - name: Total kpi Contraction + Churn
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
       table:
         table_columns:
         - column_id: Total kpi Contraction + Churn

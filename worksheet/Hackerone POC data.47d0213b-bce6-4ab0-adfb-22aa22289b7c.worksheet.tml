@@ -272,6 +272,8 @@ model:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
+      currency_type:
+        iso_code: USD
   - name: Stub Deals Impact
     column_id: hackerone_data::STUB_DEALS_IMPACT
     properties:
