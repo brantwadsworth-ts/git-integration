@@ -493,6 +493,41 @@ liveboard:
     viz_guid: 414149e5-56ba-4deb-b163-3aeb72072249
     note_tile:
       html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\"><a href=\"https://google.com\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Customer Dashboard</span></a></h2><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  - id: Viz_10
+    answer:
+      name: Total Churn Narr by Monthly Date
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      search_query: "[Churn Narr] [Date].monthly"
+      answer_columns:
+      - name: Month(Date)
+      - name: Total Churn Narr
+      table:
+        table_columns:
+        - column_id: Month(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Churn Narr
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Date)
+        - Total Churn Narr
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Date)
+        - column_id: Total Churn Narr
+        axis_configs:
+        - x:
+          - Month(Date)
+          "y":
+          - Total Churn Narr
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Churn Narr\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f85aaff6-2a2f-4640-8681-d7767bd57733\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Churn Narr\"],\"isOpposite\": false}},{\"id\": \"1ca3d1b7-05b6-4afd-bb3f-de5f1ce30205\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: e9804ab7-6c5b-4b15-adaa-5a2b7af3869c
   filters:
   - column:
     - H1 Sample::Account Band
