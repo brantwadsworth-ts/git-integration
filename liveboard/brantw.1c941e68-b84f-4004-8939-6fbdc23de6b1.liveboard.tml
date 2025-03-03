@@ -23,6 +23,7 @@ liveboard:
         - Account Regions
         - Total Renewable Booking Amount
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Account Regions\",\"columnProperty\": {}},{\"columnId\": \"Total Renewable Booking Amount\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
@@ -34,5 +35,40 @@ liveboard:
           "y":
           - Total Renewable Booking Amount
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Account Regions\",\"columnProperty\": {}},{\"columnId\": \"Total Renewable Booking Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f37768b2-6b4d-4fe1-afbf-b0a1f55662fa\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Renewable Booking Amount\"],\"isOpposite\": false}},{\"id\": \"ce944b9f-e590-474b-abd0-b29cfc6b4553\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account Regions\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 771a1da5-39d9-4383-a5f7-dacf6ff1280e
+  - id: Viz_2
+    answer:
+      name: Total Total New Booking Amount by Year Period Label
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      search_query: "[Total New Booking Amount] by [Year Period Label]"
+      answer_columns:
+      - name: Total Total New Booking Amount
+      - name: Year Period Label
+      table:
+        table_columns:
+        - column_id: Total Total New Booking Amount
+          headline_aggregation: SUM
+        - column_id: Year Period Label
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Year Period Label
+        - Total Total New Booking Amount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Total New Booking Amount
+        - column_id: Year Period Label
+        axis_configs:
+        - x:
+          - Year Period Label
+          "y":
+          - Total Total New Booking Amount
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 8837e658-bb41-4c62-a0fe-147e872d4308
