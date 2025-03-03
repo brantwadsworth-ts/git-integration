@@ -72,3 +72,53 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 8837e658-bb41-4c62-a0fe-147e872d4308
+  - id: Viz_3
+    answer:
+      name: Copy of Total % of Quarter by Day Of Fiscal Quarter
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      formulas:
+      - id: '% of Quarter'
+        name: '% of Quarter'
+        expr: "[Day Of Fiscal Quarter] / [Days of Fiscal Quarter] "
+        was_auto_generated: false
+      - id: Days of Fiscal Quarter
+        name: Days of Fiscal Quarter
+        expr: "diff_days ( [Last Day Of Fiscal Quarter] , [First Day Of Fiscal Quarter]  )"
+        was_auto_generated: false
+      search_query: "[Day Of Fiscal Quarter] [Date].today [% of Quarter]"
+      answer_columns:
+      - name: Day Of Fiscal Quarter
+      - name: Total % of Quarter
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Day Of Fiscal Quarter
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total % of Quarter
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Day Of Fiscal Quarter
+        - Total % of Quarter
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day Of Fiscal Quarter\",\"columnProperty\": {}},{\"columnId\": \"Total % of Quarter\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day Of Fiscal Quarter
+        - column_id: Total % of Quarter
+        axis_configs:
+        - x:
+          - Day Of Fiscal Quarter
+          "y":
+          - Total % of Quarter
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day Of Fiscal Quarter\",\"columnProperty\": {}},{\"columnId\": \"Total % of Quarter\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"41b8685b-c886-47a5-9d3a-0a482bed09db\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % of Quarter\"],\"format\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 0.0},\"isCategoryEditable\": true},\"name\": \"% Into Fiscal Quarter\",\"yAxisRange\": {\"max\": 1.0},\"isOpposite\": false}},{\"id\": \"5b77280e-b852-4bcf-bdc8-5fff6165aed3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day Of Fiscal Quarter\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\",\\\"fontSize\\\":\\\"16\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total % of Quarter\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: cd13d512-27b4-45a8-9366-12d61a28491c
