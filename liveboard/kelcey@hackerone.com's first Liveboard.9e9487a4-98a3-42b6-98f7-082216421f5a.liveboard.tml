@@ -562,6 +562,40 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 8dfaf551-7280-4970-a7eb-ec1da437c28f
+  - id: Viz_12
+    answer:
+      name: Total Total New Booking Amount by Account Band
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      search_query: "[Total New Booking Amount] [Year Period Label].2024-P07 by [Account Band]"
+      answer_columns:
+      - name: Account Band
+      - name: Total Total New Booking Amount
+      table:
+        table_columns:
+        - column_id: Account Band
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Total New Booking Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Account Band
+        - Total Total New Booking Amount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Account Band
+        - column_id: Total Total New Booking Amount
+        axis_configs:
+        - x:
+          - Account Band
+          "y":
+          - Total Total New Booking Amount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 86de3106-9f7a-4b62-a54d-b68c7fc83e14
   filters:
   - column:
     - H1 Sample::Account Band
