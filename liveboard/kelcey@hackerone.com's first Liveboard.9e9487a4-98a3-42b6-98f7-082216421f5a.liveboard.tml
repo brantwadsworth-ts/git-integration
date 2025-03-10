@@ -528,6 +528,40 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Churn Narr\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f85aaff6-2a2f-4640-8681-d7767bd57733\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Churn Narr\"],\"isOpposite\": false}},{\"id\": \"1ca3d1b7-05b6-4afd-bb3f-de5f1ce30205\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Date)\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: e9804ab7-6c5b-4b15-adaa-5a2b7af3869c
+  - id: Viz_11
+    answer:
+      name: Total Total New Booking Amount by Account Band
+      tables:
+      - id: Hackerone POC data
+        name: Hackerone POC data
+        fqn: 47d0213b-bce6-4ab0-adfb-22aa22289b7c
+      search_query: "[Total New Booking Amount] [Year Period Label].2024-P07 by [Account Band]"
+      answer_columns:
+      - name: Account Band
+      - name: Total Total New Booking Amount
+      table:
+        table_columns:
+        - column_id: Account Band
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Total New Booking Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Account Band
+        - Total Total New Booking Amount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Account Band
+        - column_id: Total Total New Booking Amount
+        axis_configs:
+        - x:
+          - Account Band
+          "y":
+          - Total Total New Booking Amount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 8dfaf551-7280-4970-a7eb-ec1da437c28f
   filters:
   - column:
     - H1 Sample::Account Band
