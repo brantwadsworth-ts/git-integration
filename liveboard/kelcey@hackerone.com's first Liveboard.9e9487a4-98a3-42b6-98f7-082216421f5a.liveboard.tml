@@ -591,6 +591,11 @@ liveboard:
       "y": 0
       height: 4
       width: 6
+    - visualization_id: Viz_10
+      x: 6
+      "y": 22
+      height: 4
+      width: 3
   ordered_chips:
   - name: H1 Sample::Account Band
     type: FILTER
