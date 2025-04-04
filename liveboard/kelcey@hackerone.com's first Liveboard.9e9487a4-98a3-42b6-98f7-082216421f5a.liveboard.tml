@@ -598,7 +598,7 @@ liveboard:
     viz_guid: 86de3106-9f7a-4b62-a54d-b68c7fc83e14
   - id: Viz_13
     answer:
-      name: Quarterly growth from previous Qtr
+      name: Quarterly growth from previous Quarter
       tables:
       - id: (Sample) Retail - Apparel
         name: (Sample) Retail - Apparel
