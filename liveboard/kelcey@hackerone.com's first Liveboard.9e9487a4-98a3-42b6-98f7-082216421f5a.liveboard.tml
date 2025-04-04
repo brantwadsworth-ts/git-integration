@@ -596,6 +596,40 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 86de3106-9f7a-4b62-a54d-b68c7fc83e14
+  - id: Viz_13
+    answer:
+      name: Growth of Total sales by Quarterly date
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "growth of [sales] by [date] [date].quarterly"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Quarter(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Quarter(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Quarter(date)
+        - Growth of Total sales
+        client_state: ""
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Quarter(date)
+        axis_configs:
+        - x:
+          - Quarter(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 5d9f5a45-1aa4-476e-b4c3-f62990483055
   filters:
   - column:
     - H1 Sample::Account Band
