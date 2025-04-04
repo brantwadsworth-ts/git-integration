@@ -651,6 +651,7 @@ liveboard:
         - Quarter(date)
         - Growth of Total sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Quarter(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
       chart:
         type: WATERFALL
         chart_columns:
@@ -662,7 +663,7 @@ liveboard:
           "y":
           - Growth of Total sales
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a108a9a6-68e5-4930-ae8f-0a110652ed9a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"a66ffa79-b7d3-460f-9860-feed75cddc09\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a108a9a6-68e5-4930-ae8f-0a110652ed9a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"a66ffa79-b7d3-460f-9860-feed75cddc09\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(date)\"]}}],\"seriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#FF8142\"}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 77c3f4c3-68cb-4b90-a3e2-b45668b39e9d
   filters:
