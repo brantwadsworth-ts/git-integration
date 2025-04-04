@@ -603,7 +603,7 @@ liveboard:
       - id: (Sample) Retail - Apparel
         name: (Sample) Retail - Apparel
         fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
-      search_query: "growth of [sales] by [date] [date].quarterly"
+      search_query: "growth of [sales] by [date] [date].quarterly [date].'last 24 months'"
       answer_columns:
       - name: Growth of Total sales
       - name: Quarter(date)
@@ -617,6 +617,7 @@ liveboard:
         - Quarter(date)
         - Growth of Total sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Quarter(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
       chart:
         type: WATERFALL
         chart_columns:
@@ -628,6 +629,7 @@ liveboard:
           "y":
           - Growth of Total sales
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Quarter(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b098b190-fd13-458a-a421-472f81bd4562\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"1d1b5568-4658-47f7-ad8d-30a51bbb5efd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 5d9f5a45-1aa4-476e-b4c3-f62990483055
   - id: Viz_14
