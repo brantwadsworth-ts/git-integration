@@ -683,7 +683,7 @@ liveboard:
     display_name: ""
   layout:
     tabs:
-    - name: Brants Additions
+    - name: Main
       description: ""
       tiles:
       - visualization_id: Viz_1
@@ -746,17 +746,21 @@ liveboard:
         "y": 26
         height: 8
         width: 6
-      - visualization_id: Viz_13
-        x: 0
-        "y": 31
-        height: 8
-        width: 6
-      - visualization_id: Viz_14
-        x: 6
-        "y": 34
-        height: 8
-        width: 6
       id: 80469649-dfad-4283-b41a-ed223fd753f5
+    - name: BW Additions
+      description: ""
+      tiles:
+      - visualization_id: Viz_14
+        x: 0
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_13
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      id: dbb036dc-9ab2-49bd-814f-061d4a1f2dde
   ordered_chips:
   - name: H1 Sample::Account Band
     type: FILTER
