@@ -682,57 +682,81 @@ liveboard:
     is_single_value: false
     display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_3
-      x: 0
-      "y": 14
-      height: 8
-      width: 12
-    - visualization_id: Viz_4
-      x: 3
-      "y": 4
-      height: 2
-      width: 3
-    - visualization_id: Viz_9
-      x: 0
-      "y": 22
-      height: 1
-      width: 6
-    - visualization_id: Viz_8
-      x: 0
-      "y": 0
-      height: 4
-      width: 6
-    - visualization_id: Viz_5
-      x: 9
-      "y": 4
-      height: 2
-      width: 3
-    - visualization_id: Viz_2
-      x: 0
-      "y": 6
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 6
-      "y": 4
-      height: 2
-      width: 3
-    - visualization_id: Viz_1
-      x: 0
-      "y": 4
-      height: 2
-      width: 3
-    - visualization_id: Viz_6
-      x: 6
-      "y": 0
-      height: 4
-      width: 6
-    - visualization_id: Viz_10
-      x: 6
-      "y": 22
-      height: 4
-      width: 3
+    tabs:
+    - name: Brants Additions
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_2
+        x: 0
+        "y": 6
+        height: 8
+        width: 12
+      - visualization_id: Viz_3
+        x: 0
+        "y": 14
+        height: 8
+        width: 12
+      - visualization_id: Viz_4
+        x: 3
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_5
+        x: 9
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_6
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_7
+        x: 6
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_8
+        x: 0
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_9
+        x: 0
+        "y": 22
+        height: 1
+        width: 6
+      - visualization_id: Viz_10
+        x: 6
+        "y": 22
+        height: 4
+        width: 3
+      - visualization_id: Viz_11
+        x: 0
+        "y": 23
+        height: 8
+        width: 6
+      - visualization_id: Viz_12
+        x: 6
+        "y": 26
+        height: 8
+        width: 6
+      - visualization_id: Viz_13
+        x: 0
+        "y": 31
+        height: 8
+        width: 6
+      - visualization_id: Viz_14
+        x: 6
+        "y": 34
+        height: 8
+        width: 6
+      id: 80469649-dfad-4283-b41a-ed223fd753f5
   ordered_chips:
   - name: H1 Sample::Account Band
     type: FILTER
